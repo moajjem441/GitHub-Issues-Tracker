@@ -24,6 +24,25 @@ const loadAllData=async()=>{
 
 
 
+const priorityColor=(priority)=>{
+
+    
+
+
+     return p === 'high' ? "bg-red-100 text-red-600" : 
+           p === 'medium' ? "bg-yellow-100 text-yellow-600" : 
+           "bg-gray-100 text-gray-600";
+}
+    
+          
+
+            
+
+
+      
+    
+
+
 
 
 const displayAllData=(data)=>{
@@ -41,7 +60,7 @@ const displayAllData=(data)=>{
 
             <div class="up flex justify-between items-center p-5">
                 <div><img class="w-[2em]" src="./assets/Open-Status.png" alt=""></div>
-                <div class="bg-red-100 px-5 py-1 rounded-full text-red-600 text-xl "> <button class="uppercase">${data.priority}</button></div>
+                <div class=" px-5 py-1 rounded-full text-xl ${priorityColor(data.priority)}"> <button class="uppercase">${data.priority}</button></div>
             </div>
 
             <div class="middle p-5">
