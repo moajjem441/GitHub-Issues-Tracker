@@ -1,0 +1,16 @@
+*{
+    font-family: "Geist", sans-serif; 
+}
+
+.active{
+    background-color: #4A00FF;
+    color: white;
+}
+
+.open{
+    border-top: 3px solid #00A96E ;
+}
+
+.close{
+     border-top: 3px solid #A855F7;
+}
