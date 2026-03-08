@@ -22,6 +22,9 @@
 //display the all data second step
 const displayCloseData=(data)=>{
 
+    const total=data.length;
+    cardTotal(total)
+    console.log(total)
 
     //console.log(data)
     const cardContainer=document.getElementById("close-container");
@@ -51,7 +54,7 @@ const displayCloseData=(data)=>{
                         <img class="w-[2em] text-[#EF4444] " src="./assets/BugDroid.png" alt="">
                     </div>
                     <div>
-                        <button class="text-xl  text-red-600 uppercase">BUG</button>
+                        <button class="text-sm  text-red-600 uppercase">BUG</button>
                     </div>
                 </div>
 
@@ -60,7 +63,7 @@ const displayCloseData=(data)=>{
                         <img class="w-[2em] text-[#D97706]" src="./assets/Vector.png" alt="">
                     </div>
                     <div>
-                        <button class=" text-xl  text-yellow-600 uppercase">help wanted</button>
+                        <button class=" text-sm  text-yellow-600 uppercase">help wanted</button>
                     </div>
                 </div>
 
@@ -88,7 +91,7 @@ const displayCloseData=(data)=>{
     
 }
 
-loadCloseData();
+// loadCloseData();
 
 
 

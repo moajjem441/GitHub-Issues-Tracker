@@ -20,6 +20,8 @@
 //display the all data second step
 const displayOpenData=(data)=>{
 
+     const total=data.length;
+    cardTotal(total)
 
     //console.log(data)
     const cardContainer=document.getElementById("open-container");
@@ -50,7 +52,7 @@ const displayOpenData=(data)=>{
                         <img class="w-[2em] text-[#EF4444] " src="./assets/BugDroid.png" alt="">
                     </div>
                     <div>
-                        <button class="text-xl  text-red-600 uppercase">BUG</button>
+                        <button class="text-sm  text-red-600 uppercase">BUG</button>
                     </div>
                 </div>
 
@@ -59,7 +61,7 @@ const displayOpenData=(data)=>{
                         <img class="w-[2em] text-[#D97706]" src="./assets/Vector.png" alt="">
                     </div>
                     <div>
-                        <button class=" text-xl  text-yellow-600 uppercase">help wanted</button>
+                        <button class=" text-sm  text-yellow-600 uppercase">help wanted</button>
                     </div>
                 </div>
 
@@ -87,7 +89,7 @@ const displayOpenData=(data)=>{
     
 }
 
-loadOpenData();
+// loadOpenData();
 
 
 
