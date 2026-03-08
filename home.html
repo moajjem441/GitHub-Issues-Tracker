@@ -36,7 +36,7 @@
 <body>
 
     <!-- header starts from here -->
-    <header class="flex justify-between items-center  border-b-2 border-gray-300 p-3">
+    <header class="flex justify-between items-center border-b-2 border-gray-300 p-3">
         <div class="left flex justify-start pl-8 py-5 gap-2 items-center">
 
             <div><img class="w-[40px] h-[40px]" src="./assets/github-logo.png" alt=""></div>
@@ -70,17 +70,17 @@
 
     <!--main three button starts from here -->
 
-    <section id="three-buttons" class="w-11/12 mx-auto mt-20 border-2 border-gray-200 p-7 shadow-sm grid flex-wrap">
+    <section id="three-buttons" class="w-11/12 mx-auto mt-20   border-2 border-gray-200 p-7 shadow-sm grid flex-wrap">
 
         <div id="button-container" class="space-x-8 ">
             <button id="all-btn" onclick="toggle('all-btn'),loadAllData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2 active">All</button>
-            <button id="open-btn" onclick="toggle('open-btn')" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Open</button>
-            <button id="close-btn" onclick="toggle('close-btn')" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Closed</button>
+            <button id="open-btn" onclick="toggle('open-btn'),loadOpenData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Open</button>
+            <button id="close-btn" onclick="toggle('close-btn'),loadCloseData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Closed</button>
         </div>
 
     </section>
 
-    <!-- main three button ends from here -->
+    <!-- main three button ends from here --> 
 
 
     <!-- main part starts from here -->   
@@ -90,7 +90,7 @@
 
     <!-- top part of 50 issues starts from here -->
 
-     <div class="top-part border-b-2 border-gray-300 w-full p-4 flex justify-between">
+     <div class="top-part border-b-2 border-gray-300  w-full p-4 flex justify-between">
         <div class="left flex justify-start items-center gap-2">
 
             <div class="left bg-gray-300 rounded-full p-2">
@@ -143,7 +143,28 @@
 
     </div>
 
+
+
+
+    <div id="open-container" class="hidden ">
+
+        </div>
+
+
+
+        <div id="close-container" class="hidden ">
+
+        </div>
+
     </section>
+
+
+      
+
+
+   
+       
+    
 
 
      <!-- card container ends from here -->
@@ -160,6 +181,8 @@
 
     <script src="./script/toggle.js"></script>
     <script src="./script/all.js"></script>
+    <script src="./script/open.js"></script>
+    <script src="./script/close.js"></script>
 </body>
 
 </html>
