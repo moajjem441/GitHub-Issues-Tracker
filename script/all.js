@@ -1,5 +1,5 @@
 
-
+// color of priority decided here
 const priorityColor=(priority)=>{
 
     
@@ -7,10 +7,36 @@ const priorityColor=(priority)=>{
            priority === 'medium' ? "bg-yellow-100 text-yellow-600" : 
            "bg-gray-100 text-gray-600";
 
+}
 
+
+
+//status wise border and image detect
+
+const openClose=(status)=>{
+    //const card=document.querySelectorAll('.card')
+    if(status==='open')
+    {
+        // card.classList.add('open')
+      return `<img class="w-[2em]" src="./assets/Open-Status.png" ></img>`
+    }
+ 
+    else{
+      //  card.classList.add('close');
+       return `<img class="w-[2em]" src="./assets/Closed- Status .png" ></img>`
+    }
     
 }
     
+
+//border top of card color according to the status
+
+const borderTop=(status)=>{
+   
+    return status === 'open' ? "border-t-8 border-green-700" : "border-t-8 border-purple-700"
+
+    
+}
 
 
 
@@ -38,16 +64,16 @@ const displayAllData=(data)=>{
         const div=document.createElement('div')
         div.innerHTML=`
         
-        <div class="card shadow-lg m-4">
+        <div class="card shadow-lg m-4 ${borderTop(data.status)}"> 
 
             <div class="up flex justify-between items-center p-5">
-                <div><img class="w-[2em]" src="./assets/Open-Status.png" alt=""></div>
+                <div >${openClose(data.status)}</div>
                 <div class=" px-5 py-1 rounded-full text-xl ${priorityColor(data.priority)}"> <button class="uppercase">${data.priority}</button></div>
             </div>
 
             <div class="middle p-5">
                 <h1 class="text-3xl font-bold capitalize">${data.title}</h1>
-                <p class="text-gray-500 text-xl">The navigation menu doesn't collapse properly on mobile devices</p>
+                <p class="text-gray-500 text-xl">${data.description}</p>
             </div>
 
             <div class="middle-down flex gap-4 p-5">
@@ -86,7 +112,6 @@ const displayAllData=(data)=>{
         
         `
         cardContainer.append(div)
-        console.log(div)
     })
 }
 
