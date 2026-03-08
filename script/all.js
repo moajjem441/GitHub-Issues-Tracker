@@ -77,7 +77,7 @@ const displayAllData=(data)=>{
 
             <div class="down p-5">
                 <h1 class="text-xl text-gray-500">#${data.id} ${data.author}</h1>
-                <p class="text-xl text-gray-500">${data.createdAt}</p>
+                <p class="text-xl text-gray-500">${data.createdAt.split('T')[0]}</p>
             </div>
 
 
