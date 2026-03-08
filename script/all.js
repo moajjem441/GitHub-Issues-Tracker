@@ -15,7 +15,7 @@ const priorityColor=(priority)=>{
 
 
 
-
+//load the all data first step 
 
 const loadAllData=async()=>{
 
@@ -25,27 +25,8 @@ const loadAllData=async()=>{
 }
 
 
-const priorityColor=(priority)=>{
 
-    
-
-
-     return p === 'high' ? "bg-red-100 text-red-600" : 
-           p === 'medium' ? "bg-yellow-100 text-yellow-600" : 
-           "bg-gray-100 text-gray-600";
-}
-    
-          
-
-            
-
-
-      
-    
-
-
-
-
+//display the all data second step
 const displayAllData=(data)=>{
 
     const cardContainer=document.getElementById("card-container");
