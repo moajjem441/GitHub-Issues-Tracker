@@ -39,17 +39,6 @@ const borderTop=(status)=>{
 }
 
 
-
-
-//load the all data first step 
-
-const loadAllData=async()=>{
-
-  const res= await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
-  const allData =await res.json()
-  displayAllData(allData.data);
-}
-
 //total card counts
 const cardTotal=(total)=>{
  
@@ -58,10 +47,30 @@ const cardTotal=(total)=>{
 
 
 
+
+
+
+//load the all data first step 
+
+const loadAllData=async()=>{
+
+    spinPart(true)
+    
+
+  const res= await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
+  const allData =await res.json()
+  displayAllData(allData.data);
+}
+
+
+
+
 //display the all data second step
 const displayAllData=(data)=>{
     const total=data.length;
     cardTotal(total)
+   
+   
    
 
     const cardContainer=document.getElementById("card-container");
@@ -123,6 +132,7 @@ const displayAllData=(data)=>{
         cardContainer.append(div)
     });
 
+     spinPart(false)
 
 }
 
@@ -132,21 +142,6 @@ loadAllData();
 
 
 
-// {
-// "id": 1,
-// "title": "Fix navigation menu on mobile devices",
-// "description": "The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.",
-// "status": "open",
-// "labels": [
-// "bug",
-// "help wanted"
-// ],
-// "priority": "high",
-// "author": "john_doe",
-// "assignee": "jane_smith",
-// "createdAt": "2024-01-15T10:30:00Z",
-// "updatedAt": "2024-01-15T10:30:00Z"
-// },
 
 
 
