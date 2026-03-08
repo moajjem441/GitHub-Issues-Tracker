@@ -1,4 +1,22 @@
 
+
+const priorityColor=(priority)=>{
+
+    
+    return  priority === 'high' ? "bg-red-100 text-red-600" : 
+           priority === 'medium' ? "bg-yellow-100 text-yellow-600" : 
+           "bg-gray-100 text-gray-600";
+
+
+    
+}
+    
+
+
+
+
+
+
 const loadAllData=async()=>{
 
   const res= await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
@@ -96,17 +114,7 @@ loadAllData();
 
 
 
-const priorityColor=(priority)=>{
 
-    
-    return  priority === 'high' ? "bg-red-100 text-red-600" : 
-           priority === 'medium' ? "bg-yellow-100 text-yellow-600" : 
-           "bg-gray-100 text-gray-600";
-
-
-    
-}
-    
           
 
             
