@@ -31,7 +31,7 @@ const displayOpenData=(data)=>{
         const div=document.createElement('div')
         div.innerHTML=`
         
-        <div class="card shadow-lg m-4 ${borderTop(data.status)}"> 
+        <div onclick="loadWordModal(${data.id})" class="card shadow-lg m-4 ${borderTop(data.status)}"> 
 
             <div class="up flex justify-between items-center p-5">
                 <div >${openClose(data.status)}</div>
