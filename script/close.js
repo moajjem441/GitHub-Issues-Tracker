@@ -3,8 +3,6 @@
 //load the all data first step 
 
 
-
-
   const loadCloseData = async () => {
 
     spinPart(true)
@@ -26,9 +24,7 @@ const displayCloseData=(data)=>{
 
     const total=data.length;
     cardTotal(total)
-    console.log(total)
-
-    //console.log(data)
+   
     const cardContainer=document.getElementById("close-container");
     
     cardContainer.innerHTML="";
@@ -45,32 +41,17 @@ const displayCloseData=(data)=>{
             </div>
 
             <div class="middle p-5">
-                <h1 class="text-3xl font-bold capitalize">${data.title}</h1>
+                <h1 class="text-2xl font-bold capitalize">${data.title}</h1>
                 <p class="text-gray-500 text-xl">${data.description}</p>
             </div>
 
-            <div class="middle-down flex gap-4 p-5">
-
-                <div class="flex justify-center items-center bg-red-100  font-bold rounded-full p-3 gap-2">
-                    <div class="">
-                        <img class="w-[2em] text-[#EF4444] " src="./assets/BugDroid.png" alt="">
-                    </div>
+           <div class="middle-down flex gap-4 p-5">
+                    
                     <div>
-                        <button class="text-sm  text-red-600 uppercase">BUG</button>
+            
+                        ${labels(data.labels)}
                     </div>
                 </div>
-
-                <div class="flex justify-center items-center bg-yellow-100  font-bold rounded-full p-3 gap-2">
-                    <div class="">
-                        <img class="w-[2em] text-[#D97706]" src="./assets/Vector.png" alt="">
-                    </div>
-                    <div>
-                        <button class=" text-sm  text-yellow-600 uppercase">help wanted</button>
-                    </div>
-                </div>
-
-
-            </div>
 
             <div class="border-t-2 border-gray-400 my-3 "></div>
 

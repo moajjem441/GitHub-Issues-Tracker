@@ -49,7 +49,7 @@
 
         <div class="right flex justify-between items-center px-10 gap-3">
 
-            <label class="input">
+            <label  class="input">
                 <svg class="h-[2em] opacity-50 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                     <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
                         stroke="currentColor" >
@@ -57,9 +57,9 @@
                         <path d="m21 21-4.3-4.3"></path>
                     </g>
                 </svg>
-                <input type="search" required placeholder="Search issues"  class="text-xl"/>
+                <input id="search-input" type="search" required placeholder="Search issues"  class="text-xl"/>
             </label>
-            <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i>New Issues</button>
+            <button id="search-btn" class="btn btn-primary">Search</button>
 
         </div>
     </header>
@@ -70,12 +70,12 @@
 
     <!--main three button starts from here -->
 
-    <section id="three-buttons" class="w-11/12 mx-auto mt-20   border-2 border-gray-200 p-7 shadow-sm grid flex-wrap">
+    <section id="three-buttons" class="w-11/12 mx-auto mt-20  rounded-md  border-2 border-gray-200 p-7 shadow-sm grid flex-wrap">
 
         <div id="button-container" class="space-x-8 ">
-            <button id="all-btn" onclick="toggle('all-btn'),loadAllData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2 active">All</button>
-            <button id="open-btn" onclick="toggle('open-btn'),loadOpenData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Open</button>
-            <button id="close-btn" onclick="toggle('close-btn'),loadCloseData()" class="text-2xl text-gray-600 font-bold border-1 border-gray-300 px-10 py-2">Closed</button>
+            <button id="all-btn" onclick="toggle('all-btn'),loadAllData()" class="text-2xl text-gray-600 font-bold  border-1 border-gray-300 px-10 py-2 active">All</button>
+            <button id="open-btn" onclick="toggle('open-btn'),loadOpenData()" class="text-2xl text-gray-600 font-bold border-1   border-gray-300 px-10 py-2">Open</button>
+            <button id="close-btn" onclick="toggle('close-btn'),loadCloseData()" class="text-2xl text-gray-600 font-bold border-1   border-gray-300 px-10 py-2">Closed</button>
         </div>
 
     </section>
@@ -143,15 +143,6 @@
          
 
 
-
-
-
-
-
-
-
-
-
         
 
 
@@ -173,16 +164,35 @@
 
     </section>
 
-
-      
-
-
-   
-       
-    
-
-
      <!-- card container ends from here -->
+
+
+
+
+     <!-- modal starts from here -->
+     
+     <!-- You can open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+<dialog id="word_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+
+    <div id="modal-word-container">
+        <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Click the button below to close</p>
+    </div>
+
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+     
+     
+     <!-- modal ends from here -->
 
 
     
@@ -190,15 +200,29 @@
 
    </section>
     
-    <!-- main part starts from here -->   
+    <!-- main part endss from here -->   
+
+
+    <section>
+
+      
+
+
+    </section>
+
+
+
 
 
 
     <script src="./script/toggle.js"></script>
+    <script src="./script/labels.js"></script>
     <script src="./script/spin.js"></script>
     <script src="./script/all.js"></script>
     <script src="./script/open.js"></script>
     <script src="./script/close.js"></script>
+    <script src="./script/search.js"></script>
+    <script src="./script/modal.js"></script>
 </body>
 
 </html>

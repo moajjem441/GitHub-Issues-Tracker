@@ -1,4 +1,7 @@
 
+
+
+
 // color of priority decided here
 const priorityColor=(priority)=>{
 
@@ -80,9 +83,10 @@ const displayAllData=(data)=>{
     data.forEach(data=>{
         //console.log(data.author)
         const div=document.createElement('div')
+       // console.log(data.id)
         div.innerHTML=`
         
-        <div class="card shadow-lg m-4 ${borderTop(data.status)}"> 
+        <div onclick="loadWordModal(${data.id})" class="card  shadow-lg m-4 ${borderTop(data.status)}"> 
 
             <div class="up flex justify-between items-center p-5">
                 <div >${openClose(data.status)}</div>
@@ -90,31 +94,16 @@ const displayAllData=(data)=>{
             </div>
 
             <div class="middle p-5">
-                <h1 class="text-3xl font-bold capitalize">${data.title}</h1>
+                <h1 class="text-2xl font-bold capitalize">${data.title}</h1>
                 <p class="text-gray-500 text-xl">${data.description}</p>
             </div>
 
             <div class="middle-down flex gap-4 p-5">
-
-                <div class="flex justify-center items-center bg-red-100  font-bold rounded-full p-3 gap-2">
-                    <div class="">
-                        <img class="w-[2em] text-[#EF4444] " src="./assets/BugDroid.png" alt="">
-                    </div>
+                    
                     <div>
-                        <button class="text-sm  text-red-600 uppercase">BUG</button>
+            
+                        ${labels(data.labels)}
                     </div>
-                </div>
-
-                <div class="flex justify-center items-center bg-yellow-100  font-bold rounded-full p-3 gap-2">
-                    <div class="">
-                        <img class="w-[2em] text-[#D97706]" src="./assets/Vector.png" alt="">
-                    </div>
-                    <div>
-                        <button class=" text-sm  text-yellow-600 uppercase">help wanted</button>
-                    </div>
-                </div>
-
-
             </div>
 
             <div class="border-t-2 border-gray-400 my-3 "></div>
@@ -137,6 +126,10 @@ const displayAllData=(data)=>{
 }
 
 loadAllData();
+
+
+
+
 
 
 
