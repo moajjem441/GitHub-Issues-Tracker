@@ -23,5 +23,6 @@ filter: Use this to shrink a list. It looks at your data and only keeps the item
 4.Arrow Function
 A shorter way to write functions using =>. It’s cleaner to read, especially when passed inside other methods like map or filter. 
 
+
 5.Template Literals
 Strings wrapped in backticks (`). it allow us to drop variables directly into text using ${variable} instead of using a bunch of + signs to glue strings together.
